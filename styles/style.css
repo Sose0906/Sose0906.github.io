@@ -8,6 +8,70 @@ body {
     font-family: sans-serif;
 }
 
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    color: #182154;
+    cursor: pointer;
+}
+
+.nav {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #182154;
+    transition: color .1s linear;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    position: relative;
+
+}
+.nav-link:after
+{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #182154;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .1s linear;
+}
+
+.nav-link:hover {
+    color: #597785;
+
+}
+
+.nav-link:hover:after {
+    opacity: 1;
+
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    background-color: white;
+    padding: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    position: fixed;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -17,6 +81,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 15px 0;
+
 }
 
 .menu ul li a {
@@ -159,19 +224,20 @@ body {
 .edu-left {
     padding: 25px;
 }
-.edu-left h4
-{
+
+.edu-left h4 {
     padding-top: 5px;
 }
-.p-first
-{
+
+.p-first {
     padding: 5px;
 }
+
 .skill-title {
     text-align: center;
     font-family: sans-serif;
     color: white;
-    background-color:#182154 ;
+    background-color: #182154;
     border-bottom: 1px solid white;
 }
 
@@ -180,8 +246,8 @@ body {
     margin-top: 30px;
     padding-top: 20px;
 }
-.skill-section
-{
+
+.skill-section {
     background-image: url("../images/back-2.webp");
     background-position: center;
     background-repeat: no-repeat;
@@ -192,18 +258,18 @@ body {
     background-blend-mode: multiply;
     color: white;
 }
-.skill-div
-{
+
+.skill-div {
     display: flex;
-    justify-content:space-between;
-    flex-wrap:wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 59px;
 }
-.skill-left-inner
-{
+
+.skill-left-inner {
     width: 40%;
     padding: 12px;
-    flex:0 0 47%;
+    flex: 0 0 47%;
     background-color: rgba(69, 81, 121, 0.8);
     background-blend-mode: multiply;
     margin-bottom: 30px;
